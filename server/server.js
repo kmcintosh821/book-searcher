@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
-const routes = require('./routes');
+const cookieParser = require('cookie-parser')
 
 const { ApolloServer } = require('@apollo/server');
 const {expressMiddleware } = require('@apollo/server/express4');
@@ -12,8 +12,8 @@ const is_prod = process.env.NODE_ENV === 'production';
 
 require('dotenv').config();
 
-const { typeDefs, resolvers } = require('./schema');
-const { authMiddleware } = require('./utils/auth')
+const { typeDefs, resolvers } = require('./schemas');
+const { authMiddleware } = require('./utils/auth.js')
 
 const server = new ApolloServer({
   typeDefs,
