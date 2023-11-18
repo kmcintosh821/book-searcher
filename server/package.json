@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "npx nodemon server.js",
-    "seed:prod": "cd ./config && NODE_ENV=production node seed.js",
-    "seed:dev": "cd ./config && node seed.js"
+    "start:dev": "npx nodemon server.js"
   },
   "keywords": [],
   "author": "",
